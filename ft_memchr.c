@@ -1,32 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlcat.c                                          :+:      :+:    :+:   */
+/*   memchr.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amatta <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/30 09:50:27 by amatta            #+#    #+#             */
-/*   Updated: 2023/03/31 16:49:13 by amatta           ###   ########.fr       */
+/*   Created: 2023/03/31 15:59:55 by amatta            #+#    #+#             */
+/*   Updated: 2023/03/31 16:41:26 by amatta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
+#include <stdio.h>
+#include <string.h>
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t	i;
-	size_t	j;
+	unsigned char	*ps;
 
-	i = 0;
-	j = 0;
-	while (dst[i] && i < dstsize)
-		i++;
-	while ((i + j + 1 < dstsize) && src[j])
+	ps = (unsigned char *)s;
+	while (*ps && n)
 	{
-		dst[i + j] = src[j];
-		j++;
+		if (*ps == (unsigned char)c)
+			return (ps);
+		ps++;
+		n--;
 	}
-	if (i < dstsize)
-		dst[i + j] = '\0';
-	return (i + ft_strlen(src));
+	if (c == 0)
+		return (ps);
+	return (NULL);
+}
+int main()
+{
+	char *s = "pingulo";
+	
+	printf("%s",ft_memchr(s,'\0',5));
 }

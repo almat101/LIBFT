@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlcat.c                                          :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amatta <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/30 09:50:27 by amatta            #+#    #+#             */
-/*   Updated: 2023/03/31 16:49:13 by amatta           ###   ########.fr       */
+/*   Created: 2023/03/31 15:02:20 by amatta            #+#    #+#             */
+/*   Updated: 2023/03/31 16:23:29 by amatta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t	i;
-	size_t	j;
+	unsigned char	*ps1;
+	unsigned char	*ps2;
 
-	i = 0;
-	j = 0;
-	while (dst[i] && i < dstsize)
-		i++;
-	while ((i + j + 1 < dstsize) && src[j])
+	ps1 = (unsigned char *)s1;
+	ps2 = (unsigned char *)s2;
+	while (*ps1 && *ps2 && (*ps1 == *ps2) && n)
 	{
-		dst[i + j] = src[j];
-		j++;
+		ps1++;
+		ps2++;
+		n--;
 	}
-	if (i < dstsize)
-		dst[i + j] = '\0';
-	return (i + ft_strlen(src));
+	if (n)
+		return (*ps1 - *ps2);
+	return (0);
 }
