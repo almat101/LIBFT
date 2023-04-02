@@ -19,20 +19,20 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	unsigned char	*ps;
 
 	ps = (unsigned char *)s;
-	while (*ps && n)
+	c = (unsigned char)c;
+	while (n && *ps != c)
 	{
-		if (*ps == (unsigned char)c)
-			return (ps);
 		ps++;
 		n--;
 	}
-	if (c == 0)
-		return (ps);
-	return (NULL);
+	if (n)
+		return ((void *)ps);
+	else
+		return (NULL);
 }
 int main()
 {
 	char *s = "pingulo";
 	
-	printf("%s",ft_memchr(s,'\0',5));
+	printf("%p",ft_memchr(s,'n',5));
 }
