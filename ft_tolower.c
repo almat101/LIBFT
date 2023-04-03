@@ -6,15 +6,15 @@
 /*   By: amatta <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 14:37:29 by amatta            #+#    #+#             */
-/*   Updated: 2023/03/30 14:45:49 by amatta           ###   ########.fr       */
+/*   Updated: 2023/04/03 16:17:03 by amatta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
+#include"libft.h"
 
 int	ft_tolower(int c)
 {
-	if ('A' >= c && c <= 'Z')
+	if ('A' <= c && c <= 'Z')
 		return (c + 32);
 	else
 		return (c);

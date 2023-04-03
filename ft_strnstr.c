@@ -1,5 +1,16 @@
-#include <string.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: amatta <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/04/03 10:31:39 by amatta            #+#    #+#             */
+/*   Updated: 2023/04/03 15:42:30 by amatta           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
@@ -7,20 +18,13 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 	if (*little == 0)
 		return ((char *)big);
-	n = strlen(little);
+	n = ft_strlen(little);
 	while (*big && n <= len)
 	{
-		if (*big == *little && strncmp(big,little,n) == 0)
+		if (*big == *little && ft_strncmp(big, little, n) == 0)
 			return ((char *)big);
 		big++;
 		len--;
-	 }
-	 return (NULL);
-}
-
-int main()
-{
-	char *big = "  prova prova  l'ago nel pagliaio";
-	char little[] = "ago";
-	printf("%s",ft_strnstr(big,little,29));
+	}
+	return (NULL);
 }

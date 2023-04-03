@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amatta <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/31 10:20:39 by amatta            #+#    #+#             */
-/*   Updated: 2023/04/03 18:37:05 by amatta           ###   ########.fr       */
+/*   Created: 2023/04/03 12:17:12 by amatta            #+#    #+#             */
+/*   Updated: 2023/04/03 15:45:26 by amatta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include"libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strdup(const char *s1)
 {
-	char	*ps;
+	char	*ptr;
+	size_t	len;
 
-	ps = (char *)s;
-	while (*ps)
-	{
-		if (*ps == (unsigned char)c)
-			return (ps);
-		ps++;
-	}
-	if (c == 0)
-		return (ps);
-	return (NULL);
+	len = ft_strlen(s1) + 1;
+	ptr = (char *)malloc(sizeof(*ptr) * len);
+	if (!ptr)
+		return (NULL);
+	return (ft_memcpy(ptr, s1, len));
 }

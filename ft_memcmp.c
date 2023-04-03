@@ -1,10 +1,22 @@
-#include <stdio.h>
-#include <string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: amatta <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/04/03 15:23:25 by amatta            #+#    #+#             */
+/*   Updated: 2023/04/03 15:55:18 by amatta           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n){
+#include"libft.h"
+
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
+{
 	unsigned char	*ps1;
 	unsigned char	*ps2;
-	
+
 	ps1 = (unsigned char *)s1;
 	ps2 = (unsigned char *)s2;
 	while (n && *ps1 == *ps2)
@@ -17,11 +29,4 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n){
 		return (*ps1 - *ps2);
 	else
 		return (0);
-}
-
-int main()
-{
-	char *s1 = "ciad";
-	char *s2 = "ciaf";
-	printf("%d",ft_memcmp(s1,s2,4));
 }
