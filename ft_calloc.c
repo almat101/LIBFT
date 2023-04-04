@@ -6,7 +6,7 @@
 /*   By: amatta <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 11:57:11 by amatta            #+#    #+#             */
-/*   Updated: 2023/04/03 15:28:12 by amatta           ###   ########.fr       */
+/*   Updated: 2023/04/04 17:19:22 by amatta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	char	*ptr;
+	void	*ptr;
 
-	ptr = (char *)malloc(size * count);
+	ptr = malloc(count * size);
 	if (!ptr)
 		return (NULL);
-	ft_bzero(ptr, (size * count));
+	ft_bzero(ptr, (count * size));
 	return (ptr);
 }
