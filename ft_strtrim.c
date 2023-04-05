@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amatta <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/03 11:57:11 by amatta            #+#    #+#             */
-/*   Updated: 2023/04/05 10:32:32 by amatta           ###   ########.fr       */
+/*   Created: 2023/04/05 12:36:52 by amatta            #+#    #+#             */
+/*   Updated: 2023/04/05 12:52:20 by amatta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
+#include <string.h>
 
-void	*ft_calloc(size_t count, size_t size)
+char *ft_strtrim(char const *s1, char const *set)
 {
-	void	*ptr;
+	size_t	s1len;
+	size_t	lset;
 
-	if (count + size < count || count + size < size)
-		return (NULL);
-	ptr = malloc(count * size);
-	if (!ptr)
-		return (NULL);
-	ft_bzero(ptr, (count * size));
-	return (ptr);
+	s1len = strlen(s1);
+	lset = strlen(set);
+	while (*s1)
+	{
+		if (
+
 }

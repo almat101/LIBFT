@@ -6,7 +6,7 @@
 /*   By: amatta <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 10:31:39 by amatta            #+#    #+#             */
-/*   Updated: 2023/04/03 15:42:30 by amatta           ###   ########.fr       */
+/*   Updated: 2023/04/05 10:43:59 by amatta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	n;
 
+	if (!big && len == 0)
+		return (0);
 	if (*little == 0)
 		return ((char *)big);
 	n = ft_strlen(little);
