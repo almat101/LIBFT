@@ -1,26 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amatta <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/03 12:17:12 by amatta            #+#    #+#             */
-/*   Updated: 2023/04/06 12:29:15 by amatta           ###   ########.fr       */
+/*   Created: 2023/04/06 11:06:55 by amatta            #+#    #+#             */
+/*   Updated: 2023/04/06 16:25:45 by amatta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
-char	*ft_strdup(const char *s1)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char	*ptr;
-	size_t	len;
+	int		i;
+	char	*ps;
 
-	len = ft_strlen(s1) + 1;
-	ptr = (char *)malloc(sizeof(*ptr) * len);
-	if (!ptr)
+	if (!s)
 		return (NULL);
-	ft_strlcpy(ptr, s1, len);
-	return (ptr);
+	ps = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (!ps)
+		return (NULL);
+	i = 0;
+	while (s[i])
+	{
+		ps[i] = f(i, s[i]);
+		i++;
+	}
+	ps[i] = '\0';
+	return (ps);
 }
