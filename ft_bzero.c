@@ -6,11 +6,11 @@
 /*   By: amatta <amatta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 11:29:01 by amatta            #+#    #+#             */
-/*   Updated: 2023/03/29 12:33:32 by amatta           ###   ########.fr       */
+/*   Updated: 2023/04/12 17:59:00 by amatta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

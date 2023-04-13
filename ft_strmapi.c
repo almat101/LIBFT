@@ -6,7 +6,7 @@
 /*   By: amatta <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 11:06:55 by amatta            #+#    #+#             */
-/*   Updated: 2023/04/06 16:25:45 by amatta           ###   ########.fr       */
+/*   Updated: 2023/04/13 10:56:42 by amatta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	int		i;
 	char	*ps;
 
-	if (!s)
+	if (!s || !f)
 		return (NULL);
 	ps = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (!ps)

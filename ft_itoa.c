@@ -6,13 +6,13 @@
 /*   By: amatta <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 15:14:54 by amatta            #+#    #+#             */
-/*   Updated: 2023/04/11 16:46:20 by amatta           ###   ########.fr       */
+/*   Updated: 2023/04/13 12:19:36 by amatta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	arr_len(int nb, int base)
+static int	arr_len(int nb, int base)
 {
 	int	count;
 

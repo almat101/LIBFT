@@ -6,7 +6,7 @@
 /*   By: amatta <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 13:23:28 by amatta            #+#    #+#             */
-/*   Updated: 2023/04/06 16:35:12 by amatta           ###   ########.fr       */
+/*   Updated: 2023/04/13 11:20:04 by amatta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,6 @@ void	ft_putendl_fd(char *s, int fd)
 {
 	if (!s)
 		return ;
-	while (*s)
-	{	
-		write(fd, &(*s++), 1);
-	}
+	write(fd, s, ft_strlen(s));
 	write(fd, "\n", 1);
 }
