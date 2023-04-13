@@ -6,11 +6,11 @@
 /*   By: amatta <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 16:46:13 by amatta            #+#    #+#             */
-/*   Updated: 2023/04/11 13:27:22 by amatta           ###   ########.fr       */
+/*   Updated: 2023/04/13 13:50:01 by amatta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {

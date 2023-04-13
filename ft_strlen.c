@@ -6,11 +6,11 @@
 /*   By: amatta <amatta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 12:01:35 by amatta            #+#    #+#             */
-/*   Updated: 2023/03/28 10:10:43 by amatta           ###   ########.fr       */
+/*   Updated: 2023/04/13 13:50:20 by amatta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {
