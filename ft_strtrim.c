@@ -6,13 +6,11 @@
 /*   By: amatta <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 12:36:52 by amatta            #+#    #+#             */
-/*   Updated: 2023/04/05 17:31:04 by amatta           ###   ########.fr       */
+/*   Updated: 2023/04/13 15:26:08 by amatta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
